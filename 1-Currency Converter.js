@@ -1,12 +1,11 @@
 	
-	var rub;
-	var RUBtoUSD = rub*58.84;
-	var RUBtoEUR = rub*69.24;
+	var dollar = 63, // текущий курс доллара
+	euro = 69, // текущий курс евро 
+	rub;
 
 	do 	{
     	  rub  = prompt('Введите сумму в рублях:', '0');
 		} 
 	while (isNaN(rub));
 
-	alert("RUB to USD: " + RUBtoUSD, 
-		  "RUB to EUR: " + RUBtoEUR);
+	alert ("Сумма в долларах: " + (rub/dollar).toFixed(2) + " $" +'\n' + "Сумма в евро: " + (rub/euro).toFixed(2) + " €")
